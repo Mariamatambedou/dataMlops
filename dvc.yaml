@@ -1,0 +1,21 @@
+stages:
+    download:
+        cmd: python src/download_data.py
+        outs:
+            - data/raw/weatherHistory.csv
+    
+    cleaning:
+        cmd: python src/run_cleaning.py
+        deps:
+            - src/run_cleaning.py
+            - data/raw/weatherHistory.csv
+        outs:
+            - data/processed/clean_weather.csv
+    
+    training:
+        cmd: python src/train.py
+        deps:
+            - src/train.py
+            - data/processed/clean_weather.csv
+        outs:
+            - models/weather_model.pkl
