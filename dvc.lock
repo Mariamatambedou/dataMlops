@@ -1,0 +1,41 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python scripts/download_data.py
+    outs:
+    - path: data/raw/weatherHistory.csv
+      hash: md5
+      md5: b272c61c35b2b5fb5543608f5cd52c52
+      size: 16294377
+  cleaning:
+    cmd: python src/run_cleaning.py
+    deps:
+    - path: data/raw/weatherHistory.csv
+      hash: md5
+      md5: b272c61c35b2b5fb5543608f5cd52c52
+      size: 16294377
+    - path: src/run_cleaning.py
+      hash: md5
+      md5: 0c59a0fc70d6919acb03acd1d57ce7af
+      size: 230
+    outs:
+    - path: data/processed/clean_weather.csv
+      hash: md5
+      md5: 4d5ed8d0d1f3d5ee1674f4af02f58dc0
+      size: 5488771
+  training:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/clean_weather.csv
+      hash: md5
+      md5: 4d5ed8d0d1f3d5ee1674f4af02f58dc0
+      size: 5488771
+    - path: src/train.py
+      hash: md5
+      md5: feb5c7c2be57586de3a6ec0b61a82a85
+      size: 1061
+    outs:
+    - path: models/weather_model.pkl
+      hash: md5
+      md5: ffd9fb0896e6f71cfcd26ff44e2765c1
+      size: 857
