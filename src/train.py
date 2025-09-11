@@ -5,6 +5,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, r2_score
+import joblib
+
+# ⚡ Ajouter cette ligne pour forcer MLflow à utiliser un stockage local
+mlflow.set_tracking_uri("file:./mlruns")  # chemin relatif dans ton projet
 
 # Charger les données
 df = pd.read_csv("data/processed/clean_weather.csv")
@@ -35,6 +39,5 @@ with mlflow.start_run():
 
     # Optionnel : enregistrer aussi le joblib classique
     os.makedirs("models", exist_ok=True)
-    import joblib
     joblib.dump(model, "models/weather_model.pkl")
     print("💾 Modèle sauvegardé dans : models/weather_model.pkl")
