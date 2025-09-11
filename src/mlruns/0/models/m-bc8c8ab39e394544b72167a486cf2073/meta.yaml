@@ -1,0 +1,10 @@
+artifact_location: file:///D:/dataEng/src/mlruns/0/models/m-bc8c8ab39e394544b72167a486cf2073/artifacts
+creation_timestamp: 1757597800477
+experiment_id: '0'
+last_updated_timestamp: 1757597811549
+model_id: m-bc8c8ab39e394544b72167a486cf2073
+model_type: null
+name: weather_model
+source_run_id: a51f36e14a3f489d8a8d1d38e27fd44b
+status: 2
+status_message: null
