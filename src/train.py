@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, r2_score
 
 # Charger les données
-df = pd.read_csv("../data/processed/clean_weather.csv")
+df = pd.read_csv("data/processed/clean_weather.csv")
 X = df[["humidity", "pressure"]]
 y = df["temperature"]
 
