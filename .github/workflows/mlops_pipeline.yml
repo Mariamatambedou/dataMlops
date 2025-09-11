@@ -2,10 +2,9 @@ name: MLOps Pipeline
 
 on:
     push:
-        paths:
-            - "data/raw/**"
-            - "src/**"
-            - "dvc.yaml"
+        branches:
+            - master
+            - main
 
 jobs:
     mlops:
