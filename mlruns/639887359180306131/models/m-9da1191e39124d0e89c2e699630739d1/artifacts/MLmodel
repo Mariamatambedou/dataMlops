@@ -1,0 +1,34 @@
+artifact_path: file:D:/dataEng/mlruns/639887359180306131/models/m-9da1191e39124d0e89c2e699630739d1/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.8
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-9da1191e39124d0e89c2e699630739d1
+model_size_bytes: 1058
+model_uuid: m-9da1191e39124d0e89c2e699630739d1
+prompts: null
+run_id: f6dddd2b5f62411cbb4a7a45a38a7536
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "humidity", "required": true}, {"type": "double",
+    "name": "pressure", "required": true}]'
+  outputs: '[{"type": "double", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-09-14 12:34:00.876487'

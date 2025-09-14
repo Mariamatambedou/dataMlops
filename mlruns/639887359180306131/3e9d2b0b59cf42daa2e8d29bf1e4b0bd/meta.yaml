@@ -1,0 +1,14 @@
+artifact_uri: file:D:/dataEng/mlruns/639887359180306131/3e9d2b0b59cf42daa2e8d29bf1e4b0bd/artifacts
+end_time: 1757852127611
+entry_point_name: ''
+experiment_id: '639887359180306131'
+lifecycle_stage: active
+run_id: 3e9d2b0b59cf42daa2e8d29bf1e4b0bd
+run_name: adaptable-owl-911
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757852120409
+status: 3
+tags: []
+user_id: mariama
